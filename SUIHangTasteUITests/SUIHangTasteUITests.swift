@@ -1,10 +1,3 @@
-//
-//  SUIHangTasteUITests.swift
-//  SUIHangTasteUITests
-//
-//  Created by Shl on 2022/10/3.
-//
-
 import XCTest
 
 class SUIHangTasteUITests: XCTestCase {

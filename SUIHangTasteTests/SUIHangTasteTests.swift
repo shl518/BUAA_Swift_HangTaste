@@ -1,10 +1,3 @@
-//
-//  SUIHangTasteTests.swift
-//  SUIHangTasteTests
-//
-//  Created by Shl on 2022/10/3.
-//
-
 import XCTest
 @testable import SUIHangTaste
 

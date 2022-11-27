@@ -1,17 +1,12 @@
-//
-//  SUIHangTasteApp.swift
-//  SUIHangTaste
-//
-//  Created by Shl on 2022/10/3.
-//
-
 import SwiftUI
+import CoreData
 
 @main
 struct SUIHangTasteApp: App {
+    let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBar().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
