@@ -26,7 +26,7 @@
 
 ### 1.2 总体架构
 
-<img src="/Users/shl/Desktop/截屏2022-11-11 22.50.26.png" alt="截屏2022-11-11 22.50.26" style="zoom:50%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2023-03-25%2021.37.41.png" alt="截屏2023-03-25 21.37.41" style="zoom:50%;" />
 
 总体采用了MVC模式，经典MVC模式中，M是指业务模型，V是指用户界面，C则是控制器，使用MVC的目的是将M和V的实现代码分离，从而使同一个程序可以使用不同的表现形式。其中，View的定义比较清晰，就是用户界面。相当于将视图层与业务逻辑层分离，耦合度低，易于重用，修改和维护。
 
@@ -34,59 +34,53 @@
 
 - 上新消息功能，在这里同学们可以看到对应食堂最近上新的菜品，主要展示形式是卡片列表的形式，卡片上有菜品名称，食堂，分数（上新菜品考虑到可能因为评论数量不够，所以分数采用“等你来打分”描述），价格等信息，点击卡片可以进入到具体的卡片信息页面，看到具体的菜品信息。
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.56.48.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.56.48" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2023-03-25%2021.38.08.png" alt="截屏2023-03-25 21.38.08" style="zoom:50%;" />
 
 - 菜品展示及排行功能，这里是所有菜品的列表，选用了北航十二道航味菜品的真实数据，按照从上到下星级数排列，同样采用卡片列表的方式展示，点击卡片可以进入到菜品具体信息页面。
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.01.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.01" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2023-03-25%2021.38.24.png" alt="截屏2023-03-25 21.38.24" style="zoom:50%;" />
 
 - 菜品单个卡片展示及动画，在这个页面展示菜品的具体描述信息，菜品描述均源于十二道航味中对菜品的描述，均经过整理。点击中央卡片可以有特殊的动画效果。在描述信息页面右下角可以点击查看评论。
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 23.06.02.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 23.06.02" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325213859913.png" alt="image-20230325213859913" style="zoom:30%;" />
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.18.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.18" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325213859913.png" style="zoom:25%;" />
 
 - 评论功能，点击查看评论可以看到对应菜品的的评论。这里链接了CoreData数据库，将comment存储为了如下实体，具有评论日期，对应菜品名等等信息。同时在项目中用NSManagedObject做了映射。进入评论列表可以点击对应评论进入到评论具体信息页面。点击我要评论进入评论信息填写表单，在这里可以设置自己对这道菜品的评分，输入自己要写的评论。
 
-<img src="/Users/shl/Library/Application Support/typora-user-images/截屏2022-11-19 11.03.14.png" alt="截屏2022-11-19 11.03.14" style="zoom:50%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2022-11-19%2011.03.14.png" alt="截屏2022-11-19 11.03.14" style="zoom:50%;" />
 
+![截屏2023-03-25 21.40.07](http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2023-03-25%2021.40.07.png)
 
-
-<img src="/Users/shl/Desktop/截屏2022-11-19 11.03.58.png" alt="截屏2022-11-19 11.03.58" style="zoom:50%;" />
-
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.25.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.25" style="zoom: 25%;" />
-
-
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214026563.png" alt="image-20230325214026563" style="zoom:25%;" />
 
 评论具体信息页面
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.29.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.29" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214115452.png" alt="image-20230325214115452" style="zoom:25%;" />
 
 我要评论表单，在这里打分，输入菜品评价。
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.37.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.37" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214128800.png" alt="image-20230325214128800" style="zoom:25%;" />
 
 - 建议功能，点击查看建议可以看到所有的建议。这里链接了CoreData数据库，将suggesr存储为了如下实体，具有建议日期，对应食堂名等等信息。同时在项目中用NSManagedObject做了映射。进入建议列表可以点击对应建议进入到建议具体信息页面。点击提出建议进入建议信息填写表单，在这里可以选取自己要提意见的食堂，输入自己要提出的建议。
 
 
 
-<img src="/Users/shl/Library/Application Support/typora-user-images/截屏2022-11-19 11.03.34.png" alt="截屏2022-11-19 11.03.34" style="zoom:50%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2022-11-19%2011.03.34.png" alt="截屏2022-11-19 11.03.34" style="zoom:50%;" />
 
-<img src="/Users/shl/Desktop/截屏2022-11-19 11.04.37.png" alt="截屏2022-11-19 11.04.37" style="zoom:50%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214149727.png" alt="image-20230325214149727" style="zoom:50%;" />
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.05.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.05" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2023-03-25%2021.42.06.png" alt="截屏2023-03-25 21.42.06" style="zoom:50%;" />
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.57.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.57.57" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214256198.png" alt="image-20230325214256198" style="zoom:25%;" />
 
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.59.00.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.59.00" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214311289.png" alt="image-20230325214311289" style="zoom:25%;" />
 
 - 生成菜品，这里用户可以输入自己预期的价位，app根据动态规划算法从数据库中选取一个总价位在预期价位附近，同时评分最高的菜品子集，并展示到结果列表中。点击每个生成的列表项同样可以跳转到菜品的具体信息页面。如果没有满足要求的菜品集，将会显示"没有满足要求的菜品清单"
 
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214356544.png" alt="image-20230325214356544" style="zoom:25%;" />
 
-
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 23.11.33.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 23.11.33" style="zoom: 25%;" />
-
-<img src="/Users/shl/Desktop/Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.59.22.png" alt="Simulator Screen Shot - iPhone 13 Pro - 2022-11-11 at 22.59.22" style="zoom: 25%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/image-20230325214412974.png" alt="image-20230325214412974" style="zoom:25%;" />
 
 Dynamic Programming算法
 
@@ -136,4 +130,4 @@ func solveMaxValue(maxPrice:Int)->[Dish] {
 
 第13届航味参选菜品，总共60余道菜，因为整理菜品描述比较繁琐，暂选择了学院路赛区的35道菜。菜品的描述信息和菜品图片均经过整理。
 
-<img src="/Users/shl/Library/Application Support/typora-user-images/截屏2022-11-19 11.15.56.png" alt="截屏2022-11-19 11.15.56" style="zoom: 33%;" />
+<img src="http://rrwk2qstp.hb-bkt.clouddn.com/%E6%88%AA%E5%B1%8F2022-11-19%2011.15.56.png" alt="截屏2022-11-19 11.15.56" style="zoom: 33%;" />
